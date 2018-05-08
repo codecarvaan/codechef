@@ -3,6 +3,7 @@ using namespace std;
 int main(){
 
                 int num;
+                cin>>num;
                 int coin[num],type[num];
                  int min_1=1000000;
                  int min_2=1000000;

@@ -1,5 +1,25 @@
 #include<iostream>
 using namespace std;
+int calculate(string str)
+{
+    int a=0,b=0,anet=0;
+    for(int i=0;i<str.length();i++)
+        {
+            if(str[i]=='a')
+            {
+                a++;
+            }
+            else{
+                b++;
+            }
+            if(a>b)
+            {
+                anet++;
+            }
+
+        }
+    return a>b;
+}
 int main()
 {
 
@@ -16,6 +36,8 @@ int main()
         times_org=times;
 
         str_sum=str;
+        if(calculate(str))
+        {
         for(int i=0;i<str_sum.length();i++)
         {
             if(str_sum[i]=='a')
@@ -57,6 +79,31 @@ int main()
         else{
             cout<<anet<<endl;
         }
+        }
+        else{
+
+            for(int i=0;i<str_sum.length();i++)
+            {
+                if(str_sum[i]=='a')
+                {
+                a++;
+                }
+                else{
+                b++;
+                }
+            if(a>b)
+            {
+                anet++;
+            }
+            if(i==str_sum.length()-1 && --times)
+            {
+                str_sum=str_sum+str;
+            }
+        }
+        cout<<anet<<endl;
+    }
+        }
+
 
     }
-}
+
